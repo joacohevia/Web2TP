@@ -34,11 +34,9 @@ include_once './helpers/AuthHelpers.php';
             //admin@gmail.com //password: admin
             $user = $this->model->getEmail($email);
             
-            if ($user && password_verify($password, $user->Password)) {
+            if ($user && password_verify($password, $user->password)) {
                 // ACA LO AUTENTIQUE
-                
                 AuthHelper::login($user);
-                
                 header('Location: ' . BASE_URL . "listar");
             } 
             else {
