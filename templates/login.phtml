@@ -1,5 +1,4 @@
 <?php require_once './templates/pag/header.phtml' ?>
-
 <div class="mt-5 w-25 mx-auto">
     <form method="POST" action="auth">
         <div class="row">
@@ -13,15 +12,12 @@
                 <div id="emailHelp" class="form-text">Mínimo 4 caracteres</div>
             </div>
         </div>
-
         <?php if ($error) {  ?>
             <div class='alert alert-danger' role='alert'>
                 <?= $error ?>
             </div> 
         <?php } ?>
-        
         <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
     </form>
 </div>
-
 <?php require_once './templates/pag/footer.phtml' ?>

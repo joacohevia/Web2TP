@@ -5,17 +5,12 @@ require_once 'app/Controllers/Categ.Controller.php';
 require_once 'app/Controllers/AuthController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
-
 $action = 'listar'; // accion por defecto
 if (!empty( $_GET['action'])) {
     $action = $_GET['action'];
 }
-
-// listar    ->    showTasks(); consulta,lista,muestra
 // parsea la accion para separar accion real de parametros
 $params = explode('/', $action);
-
-
 switch ($params[0]) {
     //publico
     case 'listar':
@@ -55,7 +50,6 @@ switch ($params[0]) {
         $controller = new ProducController();
         $controller->borrarItem($params[1]);
         break;
-
         //categorias
     case 'formCategoria'://formulario para agregar cat NUEVO
         $controller = new CategController();
@@ -77,7 +71,6 @@ switch ($params[0]) {
         $controller = new CategController();
         $controller->borrarCateg($params[1]);
         break;
-    
         //login
     case 'login':
         $controller = new authController();

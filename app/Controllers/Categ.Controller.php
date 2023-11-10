@@ -85,7 +85,7 @@
 
         function ModCateg($id) {
             if (ValidationHelper::verifyIdRouter($id)){
-                $categoria = $this->model->ListCateg($id);
+                $categoria = $this->model->CategId($id);
                 if ($categoria != null){
                     $this->view->formModCateg($categoria);
                 } else {

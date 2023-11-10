@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>TUDAI - TP Especial</title>
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
         <!-- Navbar content -->
@@ -18,7 +17,7 @@
         </a>
     <div class="container-fluid" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <?php if (!AuthHelper::isAdmin()) ://Si no esta loguead ?>
+        <?php if (!AuthHelper::isAdmin()) ://Si no esta logueado ?>
             <li class="nav-item">
                 <li class="nav-item active">
                     <a class="nav-link" href="listar">Listado <span class="sr-only"></span></a>

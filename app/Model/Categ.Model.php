@@ -14,7 +14,13 @@ require_once 'app/Model/model.php';
             $query->execute([$id]);
             return $query->fetchAll(PDO::FETCH_OBJ);
         }
-
+        function CategId($id) {
+            $query = $this->db->prepare('SELECT * FROM categorias WHERE IDCategoria = ?');
+            $query->execute([$id]); 
+            $list = $query->fetchAll(PDO::FETCH_OBJ);
+            return $list;
+            
+        }
         function CategDisp() {
             $query = $this->db->prepare('SELECT categorias.IDCategoria,categorias.Categoria FROM categorias;');
             $query->execute();
